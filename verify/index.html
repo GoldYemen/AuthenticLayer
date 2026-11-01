@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AuthenticLayer — صفحة التحقّق</title>
+  <style>
+    body { font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, sans-serif;
+           background:#0d1117; color:#e6edf3; max-width:720px; margin:56px auto; padding:0 20px; line-height:1.7; }
+    h1 { font-size:26px; margin-bottom:4px; }
+    .sub { color:#8b949e; margin-bottom:28px; }
+    label { display:block; margin:18px 0 6px; font-weight:600; font-size:14px; }
+    input, textarea { width:100%; padding:12px; border-radius:8px; border:1px solid #30363d;
+                      background:#161b22; color:#e6edf3; box-sizing:border-box; font-family:inherit; }
+    button { margin-top:18px; padding:12px 24px; border:0; border-radius:8px;
+             background:#2ea043; color:#fff; font-size:15px; cursor:pointer; }
+    button:hover { background:#3fb950; }
+    .card { margin-top:24px; padding:16px; border-radius:10px; background:#161b22; border:1px solid #30363d; }
+    .foot { margin-top:40px; color:#8b949e; font-size:13px; }
+    code { background:#21262d; padding:2px 6px; border-radius:5px; }
+  </style>
+</head>
+<body>
+  <h1>🛡️ AuthenticLayer</h1>
+  <p class="sub">طبقة مفتوحة المصدر لإثبات أصالة المحتوى وإنسانيّة صاحبه.</p>
+
+  <form method="post" action="/sign-and-verify">
+    <label for="content">المحتوى المراد ختمه والتحقّق منه</label>
+    <textarea id="content" name="content" rows="3">هذه صورة صحفية حقيقية التُقطت في الميدان.</textarea>
+
+    <label for="handle">معرّف المستخدم (يُحوَّل فورًا إلى معرّف مجهول — لا يُخزَّن)</label>
+    <input id="handle" name="handle" value="demo@user">
+
+    <button type="submit">اختم وتحقّق</button>
+  </form>
+
+  <div class="foot">
+    بعد الضغط: يمنحك النظام ختمًا رقميًا + مفتاحًا عامًا، ثم يتحقّق من الختم.<br>
+    لتجربة كشف التعديل: غيّر كلمة من النص وأعد المحاولة — سيظهر ❌ أن المحتوى عُدّل.<br>
+    مبدأ التصميم: <code>لا نخزّن بيانات شخصية</code> و<code>لا نخترع تشفيرًا من الصفر</code>.
+  </div>
+</body>
+</html>

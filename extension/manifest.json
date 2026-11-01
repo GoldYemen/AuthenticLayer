@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "AuthenticLayer — ختم الأصالة",
+  "version": "0.1.0",
+  "description": "ضع ختمًا رقميًا على المحتوى الذي تنشره، وأكّد أنه من إنسان حقيقي.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "AuthenticLayer"
+  },
+  "permissions": ["activeTab", "scripting", "clipboardWrite"],
+  "host_permissions": ["http://127.0.0.1:8000/*"],
+  "icons": { "128": "icon.png" }
+}
